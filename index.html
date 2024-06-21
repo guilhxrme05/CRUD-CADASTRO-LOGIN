@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro & Login</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            border: 10px solid #ddd; /* Borda ao redor de todo o conteúdo */
+        }
+
+        #divCadastro, #divLogin, #divLista {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: calc(100% - 24px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        input#inptCadastroUser,
+        input#inptCadastroEmail {
+            width: calc(100% - 24px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #f0f0f0;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        label {
+            color: #666;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="divCadastro">
+        <center>
+            <h2>Cadastro</h2>
+            <input id="inptCadastroUser" placeholder="Username">
+            <br><br>
+            <input id="inptCadastroPass" placeholder="Password" type="password">
+            <br><br>
+            <input id="inptCadastroEmail" placeholder="Email">
+            <br><br>
+            <button onclick="Cadastrar()">Cadastrar</button>
+            <button onclick="Pesquisar()">Pesquisar</button>
+            <button onclick="Editar()">Editar</button>
+            <button onclick="Excluir()">Excluir</button>
+            <button onclick="Listar()">Listar</button>
+        </center>
+    </div>
+
+    <div id="divLogin">
+        <center>
+            <h2>Login</h2>
+            <input placeholder="Username" id="inptLoginUser" type="text">
+            <br><br>
+            <input placeholder="Password" id="inptLoginPass" type="password">
+            <br><br>
+            <button onclick="Logar()">Logar</button>
+        </center>
+    </div>
+
+    <div id="divLista">
+        <center>
+            <h2>Lista de Usuários</h2>
+            <label id="lblLista">Nenhum dado de usuário cadastrado!</label>
+        </center>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>
